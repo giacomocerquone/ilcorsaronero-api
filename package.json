@@ -1,0 +1,29 @@
+{
+    "name": "ilcorsaronero_scraper",
+    "version": "0.1.0",
+    "description": "module to scrape torrents from ilcorsaronero",
+    "main": "dist/index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/giacomocerquone/ilcorsaronero_scraper.git"
+    },
+    "keywords": [ "torrent", "scraper", "ilcorsaronero" ],
+    "author": "Giacomo Cerquone (cerquone96@hotmail.it)",
+    "license": "GPL-3.0+",
+    "bugs": {
+        "url": "https://github.com/giacomocerquone/ilcorsaronero_scraper/issues"
+    },
+    "homepage": "https://github.com/giacomocerquone/ilcorsaronero_scraper",
+    "readmeFilename": "README.md",
+    "dependencies": {
+        "request": "^2.65.0",
+        "cheerio": "^0.19.0"
+    },
+    "devDependencies": {
+        "jshint": "latest"
+    },
+    "scripts": { 
+        "lint": "jshint index.js"
+    }
+
+}
