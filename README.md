@@ -2,7 +2,7 @@
 With this module we can get magnets of torrents from ilcorsaronero.info. They're not providing any kind of API, so this module just scrape the information from the website.
 
 ##Installation
-Give `npm install -g ilcorsaronero-api` into your project<br/>
+Give `npm install ilcorsaronero-api` into your project<br/>
 Or<br/>
 Download this repo and give `npm install`<br/>
 
