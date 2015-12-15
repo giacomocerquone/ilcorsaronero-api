@@ -17,21 +17,21 @@ It can be a string or an array of string (we're implementing this last one). It 
 
 ##Available categories
 The categories are the ones you can see from the website, capital letters and space must be respected:
-Screener
-DVD
-SerieTv
-Anime
-BDRiP
-PC Games
-PlayStation
-XBOX
-Musica
-Audiolibri
-Ebooks
-App Win
-App Linux
-App Mac
-H4cikn9
+Screener<br/>
+DVD<br/>
+SerieTv<br/>
+Anime<br/>
+BDRiP<br/>
+PC Games<br/>
+PlayStation<br/>
+XBOX<br/>
+Musica<br/>
+Audiolibri<br/>
+Ebooks<br/>
+App Win<br/>
+App Linux<br/>
+App Mac<br/>
+H4cikn9<br/>
 Altro
 
 ##Example of Usage
