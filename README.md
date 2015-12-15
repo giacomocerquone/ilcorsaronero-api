@@ -9,12 +9,13 @@ Download this repo and give `npm install`<br/>
 ##Documentation
 Right now the module provide two functions:
 
-###.search("string to search", categories, callback(err, data){ });
-Here is pretty much self explanatory except for categories.<br/>
-It can be a string or an array of string (we're implementing this last one). It is optional and if added as parameter the module will avoid completely, so it's also faster, to scrape every other item resulted from the search that doesn't match the paramater.
+###.search("string to search", categories, callback(err, data));
+With this method we can search for torrents.<br/>
+"Categories" is a parameter and it can be a string or an array of string, it's optional and if added the module will avoid completely to scrape every other item resulted from the search that doesn't match the paramaterso, being also faster in this way.
 
-###.latest(categories, callback(err, data){ });
-{inprogress}
+###.latest(categories, callback(err, data));
+With this method we can get the latest torrents published on ilcorsaronero.info 
+The same here, categories is optional and can be a string or an array of string.
 
 ##Available categories
 The categories are the ones you can see from the website, capital letters and space must be respected:<br/>
@@ -38,14 +39,17 @@ The categories are the ones you can see from the website, capital letters and sp
 ##Example of Usage
 There is a very simple example in the 'test' folder. This is what it contains:
 ```javascript
-var icn = require("../index.js");
+var icn = require("ilcorsaronero-api");
 
-icn.search("Star Wars", "BDRiP", function(err, data) {
+icn.search("Star Wars", ["BDRiP", "Screener"] , function(err, data) {
     if (err) throw err;
     console.log(data);
 });
+icn.latest(function(err, data) {
+  if (err) throw err;
+  console.log(data);
+});
 ```
-{inprogress}
 
 ##License
 Released under the GNU 3 license.<br>

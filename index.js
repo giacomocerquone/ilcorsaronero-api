@@ -69,10 +69,8 @@ function scrape(url, cat, callback) {
           }
         });
       });
-
     }
   });
-
 }
 
 exports.search = search;
