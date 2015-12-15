@@ -1,19 +1,19 @@
 {
-    "name": "ilcorsaronero_scraper",
+    "name": "ilcorsaronero-api",
     "version": "0.1.0",
-    "description": "module to scrape torrents from ilcorsaronero",
+    "description": "nodejs scraping-API for ilcorsaronero.info",
     "main": "dist/index.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/giacomocerquone/ilcorsaronero_scraper.git"
+        "url": "https://github.com/giacomocerquone/ilcorsaronero-api.git"
     },
-    "keywords": [ "torrent", "scraper", "ilcorsaronero" ],
+    "keywords": [ "torrent", "scraper", "ilcorsaronero", "api" ],
     "author": "Giacomo Cerquone (cerquone96@hotmail.it)",
     "license": "GPL-3.0+",
     "bugs": {
-        "url": "https://github.com/giacomocerquone/ilcorsaronero_scraper/issues"
+        "url": "https://github.com/giacomocerquone/ilcorsaronero-api/issues"
     },
-    "homepage": "https://github.com/giacomocerquone/ilcorsaronero_scraper",
+    "homepage": "https://github.com/giacomocerquone/ilcorsaronero-api",
     "readmeFilename": "README.md",
     "dependencies": {
         "request": "^2.65.0",
@@ -22,7 +22,7 @@
     "devDependencies": {
         "jshint": "latest"
     },
-    "scripts": { 
+    "scripts": {
         "lint": "jshint index.js"
     }
 
