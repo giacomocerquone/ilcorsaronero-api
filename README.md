@@ -16,7 +16,7 @@ It can be a string or an array of string (we're implementing this last one). It 
 {inprogress}
 
 ##Available categories
-The categories are the ones you can see from the website, capital letters and space must be respected:
+The categories are the ones you can see from the website, capital letters and space must be respected:<br/>
 Screener<br/>
 DVD<br/>
 SerieTv<br/>
