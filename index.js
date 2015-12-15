@@ -5,16 +5,22 @@ var request = require('request'),
     counter = 0;
 
 function search(term, cat, callback) {
-  if (typeof callback === 'undefined' && typeof cat !== 'function') {
-    console.log("Missing callback function.");
-    return;
-  }
   if (typeof term !== 'string') {
     callback(new Error("You must enter a string to search."));
     return;
   }
-  var url = "http://ilcorsaronero.info/argh.php?search=" + encodeURIComponent(term);
+  scrape("http://ilcorsaronero.info/argh.php?search=" + encodeURIComponent(term), cat, callback)
+}
 
+function latest(cat, callback) {
+  scrape("http://ilcorsaronero.info/recenti", cat, callback);
+}
+
+function scrape(url, cat, callback) {
+  if (typeof callback === 'undefined' && typeof cat !== 'function') {
+    console.log("Missing callback function.");
+    return;
+  }
   request(url, function (error, response, body) {
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(body);
@@ -23,6 +29,7 @@ function search(term, cat, callback) {
       // We don't scrape the categories if they're specified
       if (typeof cat === 'undefined' || typeof cat === 'function') {
         var items = $('.odd, .odd2');
+        callback = cat;
       } else if (typeof cat === 'string') {
         var items = $('.odd, .odd2').filter(function() {
           return $(this).children('td').eq(0).children('a').text() === cat;
@@ -65,10 +72,6 @@ function search(term, cat, callback) {
 
     }
   });
-
-}
-
-function latest() {
 
 }
 

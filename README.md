@@ -8,36 +8,38 @@ Download this repo and give `npm install`<br/>
 
 ##Documentation
 Right now the module provide two functions:
+
 ###.search("string to search", categories, callback(err, data){ });
 Here is pretty much self explanatory except for categories.<br/>
-It can be a string or an array of string (we're implementing this last one). It is optional and if added as parameter the module will avoid to scrape every other item resulted from the search that doesn't match the paramater.
+It can be a string or an array of string (we're implementing this last one). It is optional and if added as parameter the module will avoid completely, so it's also faster, to scrape every other item resulted from the search that doesn't match the paramater.
 
 ###.latest(categories, callback(err, data){ });
 {inprogress}
 
 ##Available categories
 The categories are the ones you can see from the website, capital letters and space must be respected:<br/>
-Screener<br/>
-DVD<br/>
-SerieTv<br/>
-Anime<br/>
-BDRiP<br/>
-PC Games<br/>
-PlayStation<br/>
-XBOX<br/>
-Musica<br/>
-Audiolibri<br/>
-Ebooks<br/>
-App Win<br/>
-App Linux<br/>
-App Mac<br/>
-H4cikn9<br/>
-Altro
+"Screener"<br/>
+"DVD"<br/>
+"SerieTv"<br/>
+"Anime"<br/>
+"BDRiP"<br/>
+"PC Games"<br/>
+"PlayStation"<br/>
+"XBOX"<br/>
+"Musica"<br/>
+"Audiolibri"<br/>
+"Ebooks"<br/>
+"App Win"<br/>
+"App Linux"<br/>
+"App Mac"<br/>
+"H4cikn9"<br/>
+"Altro"
 
 ##Example of Usage
 There is a very simple example in the 'test' folder. This is what it contains:
 ```javascript
 var icn = require("../index.js");
+
 icn.search("Star Wars", "BDRiP", function(err, data) {
     if (err) throw err;
     console.log(data);
