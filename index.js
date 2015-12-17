@@ -9,20 +9,12 @@ function search(term, cat, callback) {
     callback(new Error("You must enter a string to search."));
     return;
   }
-  scrape("http://ilcorsaronero.info/argh.php?search=" + encodeURIComponent(term), cat, callback)
-}
-
-function latest(cat, callback) {
-  scrape("http://ilcorsaronero.info/recenti", cat, callback);
-}
-
-function scrape(url, cat, callback) {
   if (typeof callback === 'undefined' && typeof cat !== 'function') {
     console.log("Missing callback function.");
     return;
   }
-  request(url, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
+  request("http://ilcorsaronero.info/argh.php?search=" + encodeURIComponent(term), function (error, response, body) {
+    if (!error && response.statusCode >= 200 && response.statusCode < 400) {
       var $ = cheerio.load(body);
       // We'll store retrieved data here
       var result = [];
@@ -60,10 +52,9 @@ function scrape(url, cat, callback) {
               date = $(row).children('td').eq(4).text(),
               seeds = $(row).children('td').eq(5).text(),
               peers = $(row).children('td').eq(6).text();
-
           result.push( { "cat": cat, "name": name, "link": link, "size": size, "date": date, "seeds": seeds, "peers": peers } );
 
-          counter++;
+          counter++
           if(counter == items.length-1) {
             callback(null, result);
           }
@@ -74,4 +65,3 @@ function scrape(url, cat, callback) {
 }
 
 exports.search = search;
-exports.latest = latest;
