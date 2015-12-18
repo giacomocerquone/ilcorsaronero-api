@@ -9,39 +9,47 @@ Download this repo and give `npm install`<br/>
 ##Documentation
 Right now the module provide two functions:
 
-###.search("string to search", categories, callback(err, data));
-With this method we can search for torrents.<br/>
-"Categories" is a parameter and it can be a string or an array of string, it's optional and if added the module will avoid completely to scrape every other item resulted from the search that doesn't match the paramaterso, being also faster in this way.
+###.search("string to search", categories, callback(err, data) {});
+With this method we search for torrents.<br/>
+"categories" is a parameter and it can be a string or an array of string, it's optional and if added the module will avoid completely to scrape every other item resulted from the search that doesn't match the paramaterso, being also faster in this way.
+
+###.latest(categories, callback(err, data) {});
+With this method we get latest available torrents.
+It works the same as the other method, with the difference that, obviously, here any search string is needed.
 
 ##Example of Usage
 There is a very simple example in the 'test' folder. This is what it contains:
 ```javascript
 var icn = require("ilcorsaronero-api");
 
-icn.search("Star Wars", ["BDRiP", "Screener"] , function(err, data) {
+icn.search("Star Wars", "BDRiP" function(err, data) {
   if (err) throw err;
-  console.log(data);
+  console.log(data.length + " search");
+});
+icn.latest(function(err, data) {
+  if (err) throw err;
+  console.log(data.length + " latest")
 });
 ```
 
 ##Available categories
 The categories are the ones you can see from the website, capital letters and space must be respected:<br/>
-"Screener"<br/>
-"DVD"<br/>
-"SerieTv"<br/>
-"Anime"<br/>
-"BDRiP"<br/>
-"PC Games"<br/>
-"PlayStation"<br/>
-"XBOX"<br/>
-"Musica"<br/>
-"Audiolibri"<br/>
-"Ebooks"<br/>
-"App Win"<br/>
-"App Linux"<br/>
-"App Mac"<br/>
-"H4cikn9"<br/>
-"Altro"
+>Screener<br/>
+DVD<br/>
+SerieTv<br/>
+Anime<br/>
+BDRiP<br/>
+PC Games<br/>
+PlayStation<br/>
+XBOX<br/>
+Musica<br/>
+Audiolibri<br/>
+Ebooks<br/>
+App Win<br/>
+App Linux<br/>
+App Mac<br/>
+H4cikn9<br/>
+Altro
 
 ##License
 Released under the GNU 3 license.<br>
