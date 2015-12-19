@@ -1,23 +1,23 @@
-#ilcorsaronero-api
+# ilcorsaronero-api
 With this module we can get magnets of torrents from ilcorsaronero.info. They're not providing any kind of API, so this module just scrape the information from the website.
 
-##Installation
+## Installation
 Give `npm install ilcorsaronero-api` into your project<br/>
 Or<br/>
 Download this repo and give `npm install`<br/>
 
-##Methods
+## Methods
 Right now the module provide two functions:
 
-###.search("string to search", categories, callback(err, data) {});
+### .search("string to search", categories, callback(err, data) {});
 With this method we search for torrents.<br/>
 "categories" is a parameter and it can be a string or an array of string, it's optional and if added the module will avoid completely to scrape every other item resulted from the search that doesn't match the paramaterso, being also faster in this way.
 
-###.latest(categories, callback(err, data) {});
+### .latest(categories, callback(err, data) {});
 With this method we get latest available torrents.
 It works the same as the other method, with the difference that, obviously, here any search string is needed.
 
-##Example of Usage
+## Example of Usage
 There is a very simple example in the 'test' folder. This is what it contains:
 ```javascript
 var icn = require("ilcorsaronero-api");
@@ -32,7 +32,7 @@ icn.latest(function(err, data) {
 });
 ```
 
-##Response Array
+## Response Array
 Any method will respond with an array of objects. Here an example of an array response with only one object inside of it:
 ```javascript
 { cat: 'BDRiP',
@@ -44,7 +44,7 @@ Any method will respond with an array of objects. Here an example of an array re
   peers: '6' }
 ```
 
-##Available categories
+## Available categories
 The categories are the ones you can see from the website, capital letters and space must be respected:<br/>
 >Screener<br/>
 DVD<br/>
@@ -63,10 +63,10 @@ App Mac<br/>
 H4cikn9<br/>
 Altro
 
-##TODO
+## TODO
 I will absolutely improve that piece of code that handle the array of categories in input... it's awful as it is right now, but it works and I needed something that could work very soon.
 
-##License
+## License
 Released under the GNU 3 license.<br>
 If you distribute a copy or make a fork of the project, you have to credit this project as source.<br>
 Copyright © 2015, Giacomo cerquone.<br>
