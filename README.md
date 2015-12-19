@@ -63,6 +63,9 @@ App Mac<br/>
 H4cikn9<br/>
 Altro
 
+##TODO
+I will absolutely improve that piece of code that handle the array of categories in input... it's awful as it is right now, but it works and I needed something that could work very soon.
+
 ##License
 Released under the GNU 3 license.<br>
 If you distribute a copy or make a fork of the project, you have to credit this project as source.<br>
