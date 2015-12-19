@@ -1,7 +1,7 @@
 {
   "name": "ilcorsaronero-api",
   "version": "0.9.1",
-  "description": "nodejs scraping-API for ilcorsaronero.info",
+  "description": "nodejs scraping-API for ilcorsaronero.info, italian torrents",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
@@ -9,9 +9,13 @@
   },
   "keywords": [
     "torrent",
+    "italiani",
     "scraper",
     "ilcorsaronero",
-    "api"
+    "api",
+    "il",
+    "corsaro",
+    "nero"
   ],
   "author": "Giacomo Cerquone (cerquone96@hotmail.it)",
   "license": "GPL-3.0+",
