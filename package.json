@@ -1,23 +1,27 @@
 {
-    "name": "ilcorsaronero-api",
-    "version": "0.9.0",
-    "description": "nodejs scraping-API for ilcorsaronero.info",
-    "main": "dist/index.js",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/giacomocerquone/ilcorsaronero-api.git"
-    },
-    "keywords": [ "torrent", "scraper", "ilcorsaronero", "api" ],
-    "author": "Giacomo Cerquone (cerquone96@hotmail.it)",
-    "license": "GPL-3.0+",
-    "bugs": {
-        "url": "https://github.com/giacomocerquone/ilcorsaronero-api/issues"
-    },
-    "homepage": "https://github.com/giacomocerquone/ilcorsaronero-api",
-    "readmeFilename": "README.md",
-    "dependencies": {
-        "request": "^2.65.0",
-        "cheerio": "^0.19.0"
-    }
-
+  "name": "ilcorsaronero-api",
+  "version": "0.9.1",
+  "description": "nodejs scraping-API for ilcorsaronero.info",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/giacomocerquone/ilcorsaronero-api.git"
+  },
+  "keywords": [
+    "torrent",
+    "scraper",
+    "ilcorsaronero",
+    "api"
+  ],
+  "author": "Giacomo Cerquone (cerquone96@hotmail.it)",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/giacomocerquone/ilcorsaronero-api/issues"
+  },
+  "homepage": "https://github.com/giacomocerquone/ilcorsaronero-api",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "request": "^2.65.0",
+    "cheerio": "^0.19.0"
+  }
 }
