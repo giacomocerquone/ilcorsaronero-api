@@ -6,7 +6,7 @@ Give `npm install ilcorsaronero-api` into your project<br/>
 Or<br/>
 Download this repo and give `npm install`<br/>
 
-##Documentation
+##Methods
 Right now the module provide two functions:
 
 ###.search("string to search", categories, callback(err, data) {});
@@ -30,6 +30,18 @@ icn.latest(function(err, data) {
   if (err) throw err;
   console.log(data.length + " latest")
 });
+```
+
+##Response Array
+Any method will respond with an array of objects. Here an example of an array response with only one object inside of it:
+```javascript
+{ cat: 'BDRiP',
+  name: 'Star Wars VI, Il ritorno dello Jedi - Star Wars VI, Ret..',
+  link: 'magnet:?xt=urn:btih: ...',
+  size: '1.05 GB',
+  date: '03.06.15',
+  seeds: '32',
+  peers: '6' }
 ```
 
 ##Available categories
