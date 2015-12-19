@@ -36,7 +36,7 @@ icn.latest(function(err, data) {
 Any method will respond with an array of objects. Here an example of an array response with only one object inside of it:
 ```javascript
 { cat: 'BDRiP',
-  name: 'Star Wars VI, Il ritorno dello Jedi - Star Wars VI, Ret..',
+  name: ' - Star Wars The Return of the Jedi Despecialized Edition ITA ENG AC3 AVCHD 720p v1.0 ZMachine - ',
   link: 'magnet:?xt=urn:btih: ...',
   size: '1.05 GB',
   date: '03.06.15',

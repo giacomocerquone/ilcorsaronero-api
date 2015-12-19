@@ -45,9 +45,10 @@ function scrape(url, cat, callback) {
         // Unluckily the magnets are not accessible from the search page. We must access the torrent page and get the magnet
         request( $(row).children('td').eq(1).children('a').attr("href"), function(error, response, body) {
           if (!error && response.statusCode == 200) {
-            var catScraped = $(row).children('td').eq(0).children('a').text(),
-                name = $(row).children('td').eq(1).children('a').text(),
-                link = cheerio.load(body)('.magnet').attr('href'),
+            var $2 = cheerio.load(body),
+                catScraped = $(row).children('td').eq(0).children('a').text(),
+                name = $2('#content > #body > center').text(),
+                link = $2('.magnet').attr('href'),
                 size = $(row).children('td').eq(2).text(),
                 date = $(row).children('td').eq(4).text(),
                 seeds = $(row).children('td').eq(5).text(),
