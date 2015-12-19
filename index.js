@@ -62,7 +62,7 @@ function scrape(url, cat, callback) {
             } else {
               result.push( { "cat": catScraped, "name": name, "link": link, "size": size, "date": date, "seeds": seeds, "peers": peers } );
             }
-            
+
             counter++;
             if(counter == items.length) {
               callback(null, result);
