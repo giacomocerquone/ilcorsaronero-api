@@ -1,4 +1,6 @@
 # ilcorsaronero-api
+### [Blog Post](http://blog.giacomocerquone.com/ilcorsaronero-api-node-js-module-to-get-italian-torrents/)<br/>
+
 With this module we can get magnets of torrents from ilcorsaronero.info. They're not providing any kind of API, so this module just scrape the information from the website.
 
 ## Installation
