@@ -24,7 +24,7 @@ There is a very simple example in the 'test' folder. This is what it contains:
 ```javascript
 var icn = require("ilcorsaronero-api");
 
-icn.search("Star Wars", "BDRiP" function(err, data) {
+icn.search("Star Wars", "BDRiP", function(err, data) {
   if (err) throw err;
   console.log(data.length + " search");
 });
